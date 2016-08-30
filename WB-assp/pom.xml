@@ -8,24 +8,24 @@
   
   <properties>
 	<!-- 主要框架版本设置  main version setting -->
-		<!-- spring版本�?-->
+		<!-- spring版本�?-->
 		<spring.version>4.0.2.RELEASE</spring.version>
-		<!-- mybatis版本�?-->
+		<!-- mybatis版本�?-->
 		<mybatis.version>3.2.6</mybatis.version>
-		<!-- log4j日志文件管理包版�?-->
+		<!-- log4j日志文件管理包版�?-->
 		<slf4j.version>1.7.7</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
-		<!-- shrio安全管理框架版本�?-->
+		<!-- shrio安全管理框架版本�?-->
 		<ehcache.version>2.6.9</ehcache.version>
 		<ehcache-web.version>2.0.4</ehcache-web.version>
 		<shiro.version>1.2.3</shiro.version>
 		<!-- druid数据源版本号 -->
 		<druid.version>1.0.11</druid.version>
-		<!-- aspectJ和cglib版本�?-->
+		<!-- aspectJ和cglib版本�?-->
 		<aspectj.version>1.8.2</aspectj.version>
 		<cglib.version>3.1</cglib.version>
 	
-	   <!-- 常用工具类版本设�?tools version setting -->
+	   <!-- 常用工具类版本设�?tools version setting -->
 		<commons-lang3.version>3.3.2</commons-lang3.version>
 		<commons-io.version>2.4</commons-io.version>
 		<commons-codec.version>1.9</commons-codec.version>
@@ -45,11 +45,11 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-			<!-- 表示�?��的时候引入，发布的时候不会加载此�?-->
+			<!-- 表示�?��的时候引入，发布的时候不会加载此�?-->
 			<!-- <scope>test</scope> -->
 		</dependency>
 		
-			<!-- spring核心�?-->
+			<!-- spring核心�?-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -101,7 +101,7 @@
 			<version>${spring.version}</version>
 		</dependency>
 		
-		<!-- 该包是spring集成AspectJ LTW织入器所�?���?-->
+		<!-- 该包是spring集成AspectJ LTW织入器所�?���?-->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -118,32 +118,32 @@
 			<version>${cglib.version}</version>
 		</dependency>
 		
-			<!-- mybatis核心�?-->
+			<!-- mybatis核心�?-->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>${mybatis.version}</version>
 		</dependency>
-		<!-- mybatis/spring�?-->
+		<!-- mybatis/spring�?-->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		<!-- 导入java ee jar �?-->
+		<!-- 导入java ee jar �?-->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 		</dependency>
 		
-		<!-- 阿里巴巴数据�?druid 配置 connection pool -->
+		<!-- 阿里巴巴数据�?druid 配置 connection pool -->
 		<dependency>
 		     <groupId>com.alibaba</groupId>
 		     <artifactId>druid</artifactId>
 		     <version>${druid.version}</version>
 		</dependency>
-		<!-- 导入Mysql数据库链接jar�?-->
+		<!-- 导入Mysql数据库链接jar�?-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -155,13 +155,13 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		<!-- JSTL标签�?-->
+		<!-- JSTL标签�?-->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		<!-- 日志文件管理�?-->
+		<!-- 日志文件管理�?-->
 		<!-- log start -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -203,7 +203,7 @@
 			<version>${guava.version}</version>
 		</dependency>
 
-		<!-- 常用工具�?GENERAL UTILS begin -->
+		<!-- 常用工具�?GENERAL UTILS begin -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -235,7 +235,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- 常用工具�?GENERAL UTILS end -->
+		<!-- 常用工具�?GENERAL UTILS end -->
 		
 		<!-- 权限管理框架 shiro SECURITY begin -->
 		<dependency>
@@ -318,14 +318,14 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.2.12</version>
 		</dependency>
-		<!-- 发�?验证�?-->
+		<!-- 发�?验证�?-->
 		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
 		</dependency>
 		
-		<!-- 发�?验证�?-->
+		<!-- 发�?验证�?-->
 		
 		
 		<dependency>
@@ -348,7 +348,7 @@
 				<artifactId>jedis</artifactId>
 				<version>2.6.0</version>
 			</dependency>
-			<!-- SFTP 相关的JAR�?-->
+			<!-- SFTP 相关的JAR�?-->
 			<dependency>
 				<groupId>com.jcraft</groupId>
 				<artifactId>jsch</artifactId>
@@ -429,5 +429,25 @@
     <module>WB-assp-site-dao</module>
     <module>WB-assp-common</module>
   </modules>
+  
+   	<dependencyManagement>
+		<dependencies>
+		  		  <dependency>
+				<groupId>WB-assp</groupId>
+				<artifactId>WB-assp-tmpl-dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		  <dependency>
+				<groupId>WB-assp</groupId>
+				<artifactId>WB-assp-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		     <dependency>
+				<groupId>DL-assp</groupId>
+				<artifactId>WB-assp-site-dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+		</dependencyManagement>
     
 </project>

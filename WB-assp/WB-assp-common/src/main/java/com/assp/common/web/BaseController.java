@@ -3,11 +3,17 @@ package com.assp.common.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSONObject;
+import com.assp.common.constant.SystemConstants;
+import com.assp.modules.sys.entity.User;
+import com.assp.modules.template.entity.Template;
+import com.assp.modules.website.entity.Website;
 
 /**
  * 
@@ -73,10 +79,12 @@ public abstract class BaseController {
 	 *         修改记录:(日期,修改人,描述) (可选)
 	 *         </p>
 	 */
-	/*
-	 * public User getloginUser(HttpServletRequest request){ User user = (User)
-	 * request.getSession().getAttribute("loginUser"); return user; }
-	 */
+	
+	 public User getloginUser(HttpServletRequest request){ 
+		 User user = (User)request.getSession().getAttribute("loginUser"); 
+		 return user;
+	 }
+	 
 
 	/**
 	 * 
@@ -88,18 +96,11 @@ public abstract class BaseController {
 	 * @return Template 返回类型
 	 * @throws
 	 */
-/*	public Template getSiteTemplate(HttpSession session) {
+	public Template getSiteTemplate(HttpSession session) {
 		return session.getAttribute("siteTempalte") == null ? null
 				: (Template) session.getAttribute("siteTempalte");
-	}*/
+	}
 
-	/**获取当前登录用户信息
-	 * @param request
-	 * @return
-	 */
-/*	public User getCurrentLoginUser(HttpServletRequest request) {
-		return (User) request.getSession().getAttribute(SystemConstants.CURRENT_LOGIN_USER);
-	}*/
 	/**
 	 * 
 	 * @Title: getWebsite
@@ -110,9 +111,9 @@ public abstract class BaseController {
 	 * @return Template 返回类型
 	 * @throws
 	 */
-/*	public Website getWebsite(HttpSession session){
+	public Website getWebsite(HttpSession session){
 		return session.getAttribute("website") == null ? null
 				: (Website) session.getAttribute("website");
-	}*/
+	}
 
 }

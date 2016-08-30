@@ -7,17 +7,13 @@
     <artifactId>WB-assp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>WB-assp-common</groupId>
   <artifactId>WB-assp-common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>WB-assp-common</name>
-  <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>WB-assp-tmpl-dao</groupId>
+      <groupId>WB-assp</groupId>
       <artifactId>WB-assp-tmpl-dao</artifactId>
     </dependency>
     <dependency>

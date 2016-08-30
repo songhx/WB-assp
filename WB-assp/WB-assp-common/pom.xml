@@ -17,6 +17,10 @@
   </properties>
   <dependencies>
     <dependency>
+      <groupId>WB-assp-tmpl-dao</groupId>
+      <artifactId>WB-assp-tmpl-dao</artifactId>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>

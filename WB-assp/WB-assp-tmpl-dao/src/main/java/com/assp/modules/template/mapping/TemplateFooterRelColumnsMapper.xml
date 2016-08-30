@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.assp.modules.template.mapper.TemplateFooterRelColumnsMapper">
+     <!-- 查询当前模板最大的排序号 -->
+    <select id="querySortNumMaxObj" resultType="com.assp.modules.template.entity.TemplateFooterRelColumns" parameterType="java.lang.Integer">
+         SELECT 
+         	template_footer_rel_columns_id as templateFooterRelColumnsId,
+	        template_footer_id as templateFooterId,
+			columns_id as columnsId,
+			sort_num as sortNum,
+			columns_hide as columnsHide,
+			rel_status as relStatus
+         FROM wms_template_footer_rel_columns 
+         WHERE
+         	rel_status = 0
+         <if test="value != null">
+		    AND template_footer_id = #{value}
+		 </if>
+		   order by sort_num DESC
+		   LIMIT 1
+    </select>
+</mapper>

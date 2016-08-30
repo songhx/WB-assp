@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.assp.modules.template.mapper.TemplateFooterMapper">
+    
+     <insert id="insertReturnKey" parameterType="com.assp.modules.template.entity.TemplateFooter"  >
+   	INSERT INTO wms_template_footer (
+		template_footer_id,
+		copyright_info,
+		style_function_id,
+		is_show_technical_support,
+		is_show_mobile_edit,
+		is_show_admin_login
+	)
+	VALUES
+		(
+			#{templateFooterId},
+			#{copyrightInfo},
+			#{styleFunctionId},
+			#{isShowTechnicalSupport},
+			#{isShowMobileEdit},
+			#{isShowAdminLogin}
+		)
+		<selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="templateFooterId">
+			SELECT @@IDENTITY
+		</selectKey>
+	</insert>
+	
+</mapper>
